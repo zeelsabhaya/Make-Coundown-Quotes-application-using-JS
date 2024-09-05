@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+<style>
+    *{
+            margin: 0;
+        }
+        .counter {
+            height: 100vh;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .counter-value {
+            font-size: 36px;
+            font-weight: bold;
+            margin: 10px;
+        }
+
+        .btn {
+            background-color: white;
+            border: none;
+            padding: 10px;
+            font-size: 24px;
+            margin: 10px;
+            cursor: pointer;
+        }
+        .counter .Subtraction{
+            margin-top: 20px;
+            background-color: green;
+            padding: 0 30px;
+            color: white;
+            font-size: 30px;
+            border-color: white;
+            margin-bottom:20px;
+            border-radius: 10px ;
+        }
+        .counter .reset{
+            background-color: green;
+            padding: 8px 15px;
+            color: white;
+            font-size: 20px;
+            border-radius: 10px;
+            border-color: white;
+        }
+        .counter .Addition{
+            margin-top: 20px;
+            background-color: green;
+            margin-bottom: 20px;
+            padding: 0 30px;
+            color: white;
+            font-size: 30px;
+            border-radius: 10px;
+            border-color: white;
+        }
+        .counter .count-value{
+            font-size: 30px;
+        }
+</style>
+
+    <div class="counter">
+        <h1>Counter App</h1>
+        <button class="Subtraction">-</button>
+        <div class="count-value">0</div>
+        <button class="	Addition">+</button>
+        <button class="reset">Reset</button>
+    </div>
+
+    <script>
+   let minus = document.querySelector(".Subtraction");
+        let plus = document.querySelector(".Addition");
+        let reset = document.querySelector(".reset");
+        let counterValue = document.querySelector(".count-value");
+
+        let counter = 0;
+
+        minus.addEventListener('click', () => {
+            counter--;
+            counterValue.innerHTML = counter;
+        });
+
+        plus.addEventListener('click', () => {
+            counter++;
+            counterValue.innerHTML = counter;
+        });
+
+        reset.addEventListener('click', () => {
+            counter = 0;
+            counterValue.innerHTML = counter;
+        });
+    </script>
+</body>
+
+</html>
